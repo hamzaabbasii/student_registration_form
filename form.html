@@ -136,6 +136,7 @@
             var fatherContactNo = document.getElementById("fatherContactNo").value;
             var email = document.getElementById("email").value;
             var className = document.getElementById("class").value;
+            var classMedium = document.getElementById("medium").value;
             var subject1 = document.getElementById("subject1").value;
             var subject2 = document.getElementById("subject2").value;
             var subject3 = document.getElementById("subject3").value;
@@ -158,6 +159,7 @@
             Father's Contact No: ${fatherContactNo}
             Email: ${email}
             Class: ${className}
+            Class Medium: ${classMedium}
             Subjects: ${subject1}, ${subject2}, ${subject3}, ${subject4}
             Address: ${address}
             Qualification: ${qualification}
@@ -175,45 +177,56 @@
             window.open(whatsappUrl, '_blank');
         }
     </script>
+
+
 </head>
 <body>
     <div class="container">
+        <img src="resonance_academy_logo.png" alt="Academy Logo" style="display: block; margin: 0 auto; max-width: 100px; margin-bottom: 20px;">
         <h1>Resonance Science Academy</h1>
-        <p class="contact">Contact No: 0333-6094943</p>
+        <p class="contact">Contact No: 0315-5106099</p>
         <p class="academy-details">Gulshan e Safeer Near Jumma Khan Market, Rawalpindi</p>
         
         <h1>Student Registration Form</h1>
         <form>
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Name <span style="color: red;">*</span></label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
-                <label for="fatherName">Father's Name</label>
+                <label for="fatherName">Father's Name <span style="color: red;">*</span></label>
                 <input type="text" id="fatherName" name="fatherName" required>
             </div>
             <div class="form-group">
-                <label for="fatherProfession">Father's Profession</label>
+                <label for="fatherProfession">Father's Profession <span style="color: red;">*</span></label>
                 <input type="text" id="fatherProfession" name="fatherProfession" required>
             </div>
             <div class="form-group">
-                <label for="contactNo">Contact No</label>
+                <label for="contactNo">Contact No <span style="color: red;">*</span></label>
                 <input type="tel" id="contactNo" name="contactNo" required>
             </div>
             <div class="form-group">
-                <label for="fatherContactNo">Father's Contact No</label>
+                <label for="fatherContactNo">Father's Contact No <span style="color: red;">*</span></label>
                 <input type="tel" id="fatherContactNo" name="fatherContactNo" required>
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">Email <span style="color: red;">*</span></label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="class">Class</label>
+                <label for="class">Class <span style="color: red;">*</span></label>
                 <input type="text" id="class" name="class" required>
             </div>
+            <div class="form-group">
+                <label for="medium">Class Medium <span style="color: red;">*</span></label>
+                <select id="medium" name="medium" required>
+                    <option value="">Select Class Medium</option>
+                    <option value="Offline">Offline</option>
+                    <option value="Online">Online</option>
+                </select>
+            </div>
             <div class="form-group-full">
-                <label>Subjects</label>
+                <label for="email">Subjects <span style="color: red;">*</span></label>
                 <div style="display: flex; flex-wrap: wrap;">
                     <div class="form-group-subject">
                         <input type="text" id="subject1" name="subject1" placeholder="Subject 1" required>
@@ -230,11 +243,11 @@
                 </div>
             </div>
             <div class="form-group-full">
-                <label for="address">Full Current Address</label>
+                <label for="address">Full Current Address <span style="color: red;">*</span></label>
                 <textarea id="address" name="address" rows="3" required></textarea>
             </div>
             <div class="form-group">
-                <label for="qualification">Current Qualification</label>
+                <label for="qualification">Current Qualification <span style="color: red;">*</span></label>
                 <input type="text" id="qualification" name="qualification" required>
             </div>
             <div class="form-group-full">
@@ -242,21 +255,22 @@
                 <textarea id="hobbies" name="hobbies" rows="2"></textarea>
             </div>
             <div class="form-group">
-                <label>Hafiz</label><br>
+                <label>Hafiz <span style="color: red;">*</span></label><br>
                 <input type="radio" id="hafizYes" name="hafiz" value="Yes" required> Yes
                 <input type="radio" id="hafizNo" name="hafiz" value="No" required> No
             </div>
             <div class="form-group">
-                <label for="course">Select Course</label>
+                <label for="course">Select Course <span style="color: red;">*</span></label>
                 <select id="course" name="course" required>
                     <option value="">Select a Course</option>
-                    <option value="Physics">English Language Course</option>
-                    <option value="Chemistry">Computer Course</option>
+                    <option value="English">English Language Course</option>
+                    <option value="Computer">Computer Course</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="duration">Course Duration</label>
                 <select id="duration" name="duration">
+                    <option value="">Select Duration of Course</option>
                     <option value="1 Month">1 Month</option>
                     <option value="2 Month">2 Month</option>
                     <option value="3 Months">3 Months</option>
@@ -269,7 +283,7 @@
                 <textarea id="expectations" name="expectations" rows="3"></textarea>
             </div>
             <div class="form-group">
-                <label for="formDate">Form Submission Date</label>
+                <label for="formDate">Form Submission Date <span style="color: red;">*</span></label>
                 <input type="date" id="formDate" name="formDate" required>
             </div>
             <button type="button" onclick="shareOnWhatsApp()">Share on WhatsApp</button>
